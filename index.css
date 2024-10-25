@@ -1,0 +1,241 @@
+/* Universal Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #4a3c3c;
+    background-color: #fff7e6; /* Light cream background */
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 182, 193, 0.9); /* Light pink with transparency */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 1em 2em;
+}
+
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #4a3c3c; /* Chocolate brown color */
+    text-decoration: none;
+    margin-right: auto; /* Push menu to the left */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 2em;
+}
+
+.menu li a {
+    color: #4a3c3c;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #7a5b5b; /* Darker brown */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 2em;
+}
+
+nav ul li a {
+    color: #4a3c3c;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #7a5b5b; /* Darker brown */
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('bakery-hero.jpg') no-repeat center center/cover;
+    color: #4a3c3c;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-content {
+    max-width: 700px;
+    animation: fadeInUp 1s ease;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    font-weight: 700;
+    color: #4a3c3c;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #7a5b5b;
+    margin-bottom: 1.5em;
+}
+
+.hero-btn {
+    padding: 0.75em 2em;
+    background-color: #f8b88b; /* Soft peach color */
+    color: #4a3c3c;
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #f7a072; /* Darker peach on hover */
+}
+
+/* Featured Products Section */
+.featured-products {
+    padding: 4em 2em;
+    text-align: center;
+    background-color: #fff0e0; /* Light peach background */
+}
+
+.featured-products h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    color: #4a3c3c;
+    margin-bottom: 1.5em;
+}
+
+/* Cookie Section with Background Watermark */
+.cookie-section {
+    position: relative;
+    display: inline-block;
+}
+
+/* Watermark text styling */
+.cookie-section .watermark-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    color: rgba(74, 60, 60, 0.08); /* Subtle chocolate brown */
+    font-size: 3vw;
+    text-transform: uppercase;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.cookie-section .watermark-text h1 {
+    font-size: 4vw; /* Larger heading size */
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.cookie-section .watermark-text p {
+    font-size: 1.5vw; /* Smaller paragraph size */
+}
+
+/* Watermarked styling */
+.watermarked {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.watermarked img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.watermarked:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #4a3c3c;
+    color: #fff5e6;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+footer ul li a {
+    color: #fddbb2;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+footer ul li a:hover {
+    color: #fff5e6;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
